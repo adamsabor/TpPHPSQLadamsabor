@@ -1,0 +1,233 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Body styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #bf5e5e; /* Light blue background */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styles */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #b71c1c;
+    
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    max-height: 50px;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    font-weight: bold;
+    position: relative;
+}
+
+nav a:hover {
+    color: #ffeb3b;
+}
+
+nav a:hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ffeb3b;
+    left: 0;
+    bottom: -5px;
+    animation: underline 0.3s ease-in-out forwards;
+}
+
+@keyframes underline {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+input[type="search"] {
+    padding: 10px;
+    border: 2px solid #ffeb3b;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: box-shadow 0.3s ease;
+}
+
+input[type="search"]:focus {
+    box-shadow: 0 0 10px rgba(255, 235, 59, 0.5);
+}
+
+/* Main content styles */
+.category {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.category h2 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #b71c1c;
+    border-bottom: 2px solid #ffeb3b;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.products-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 250px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 2px solid #ffeb3b;
+}
+
+.product-item h3 {
+    font-size: 1.2em;
+    color: #b71c1c;
+    margin: 10px 0 5px;
+}
+
+.product-item p {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.add-to-cart {
+    background-color: #b71c1c;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin: 0 10px 10px 10px;
+}
+
+.add-to-cart:hover {
+    background-color: #ffeb3b;
+    color: #b71c1c;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+}
+
+footer a {
+    color: #ffeb3b;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Cart styles */
+#cart {
+    background-color: white;
+    border: 2px solid #ffeb3b;
+    padding: 20px;
+    border-radius: 10px;
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#cart h3 {
+    margin-bottom: 20px;
+    color: #b71c1c;
+}
+
+#cart ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+#cart li {
+    color: #b71c1c;
+}
+
+#cart p {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.empty-cart {
+    background-color: #b71c1c;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.empty-cart:hover {
+    background-color: #ffeb3b;
+    color: #b71c1c;
+}
+
+/* Detailed Cart styles */
+#detailed-cart {
+    display: none;
+}
+
+/* Countdown styles */
+.countdown {
+    font-size: 2.5em;
+    color: #b71c1c;
+    margin-top: 20px;
+}
